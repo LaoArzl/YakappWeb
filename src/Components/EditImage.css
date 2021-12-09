@@ -1,0 +1,53 @@
+.edit-image {
+  width: 800px;
+  height: 500px;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  border-radius: 5px;
+}
+
+.edit-image i {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid lightgrey;
+  cursor: pointer;
+  border-radius: 50%;
+  background: #eee;
+  color: grey;
+}
+
+.edit-image i:hover {
+  transition: 0.1s ease-in-out;
+  background: rgb(221, 221, 221);
+}
+
+.edit-image-left {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #eee;
+  border-radius: 5px;
+}
+
+.edit-image-left img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.edit-image-right {
+  width: 40%;
+  height: 100%;
+}

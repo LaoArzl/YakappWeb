@@ -1,0 +1,144 @@
+.image-form {
+  width: 500px;
+  height: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgb(255, 255, 255);
+  border-radius: 5px;
+  padding: 0px 20px;
+}
+
+.image-form-header {
+  display: flex;
+  align-items: center;
+  height: 15%;
+  justify-content: center;
+  color: #272727;
+  position: relative;
+}
+
+.image-form-header i {
+  height: 35px;
+  width: 35px;
+  background: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+  color: grey;
+}
+
+.image-form-header i:hover {
+  background: rgb(211, 211, 211);
+}
+
+.image-form-body {
+  width: 100%;
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-bottom: 20px;
+}
+
+.image-drop {
+  background: #eee;
+  width: 100%;
+  height: 75%;
+  border: 2px dashed rgb(153, 167, 194);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: rgb(153, 167, 194);
+  position: relative;
+  overflow: hidden;
+}
+
+.image-drop input {
+  width: 100%;
+  background: rgba(255, 192, 203, 0);
+  height: 200%;
+  position: absolute;
+  left: 0;
+  top: -20%;
+}
+
+.image-drop-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-drop-wrapper:hover .remove-img {
+  display: flex;
+  transition: 0.1s ease-in-out;
+}
+
+.remove-img {
+  position: absolute;
+  background: rgb(243, 52, 52);
+  padding: 10px;
+  cursor: pointer;
+  color: white;
+  display: none;
+  transition: 0.1s ease-in-out;
+  font-size: 14px;
+  z-index: 2;
+}
+
+.image-drop-wrapper img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.image-drop i {
+  font-size: 40px;
+  margin-bottom: 5px;
+}
+
+.upload-btn {
+  width: 100%;
+  height: 45px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background: rgb(73, 87, 151);
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
+}
+
+.upload-btn:hover {
+  background: rgb(50, 59, 102);
+  transition: 0.1s ease-in-out;
+}
+
+.image-stock {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  overflow: hidden;
+  background: #eee;
+}
+
+.image-stock img {
+  object-fit: contain;
+  width: 100%;
+  transition: 0.1s ease-in-out;
+}
+
+.image-stock img:hover {
+  transform: scale(1.1);
+  transition: 0.1s ease-in-out;
+}
