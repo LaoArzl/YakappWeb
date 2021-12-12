@@ -12,8 +12,9 @@ import Toast from "./Toast";
 import Confirmation from "./Confirmation";
 import { Redirect } from "react-router";
 import ImagePicker from "./ImagePicker";
+import { useParams } from "react-router-dom";
 
-const Chapter = (props) => {
+const Chapter = (props, { match }) => {
   const dispatch = useDispatch();
   const history = useHistory();
   const lesson = useSelector((state) => state.lesson.value);
@@ -37,7 +38,7 @@ const Chapter = (props) => {
 
   useEffect(() => {
     lesson
-      .filter((id) => id._id === props.id)
+      .filter((id) => id.lesson === props.id)
       .map((e) => {
         setLessonTitle(e.lessonTitle);
         setDescription(e.description);
@@ -45,6 +46,8 @@ const Chapter = (props) => {
         setChapters(e.chapters.length);
       });
   }, []);
+
+  const { chapterId } = useParams();
 
   useEffect(() => {
     Axios.get("http://localhost:3001/add-lesson").then((response) => {

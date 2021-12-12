@@ -46,7 +46,7 @@ function App() {
         <ProtectedRoute path="/images" exact component={Images} />
         <Route path="/lesson" exact component={Lesson} />
         <Route path="/login" exact component={Login} />
-        {/* <ProtectedRoute path="/lesson/chapter/:id" component={Chapter} /> */}
+        {/* <ProtectedRoute path="/lesson/chapter/:chapterId" component={Chapter} /> */}
 
         {lesson.map((e) => {
           return (
