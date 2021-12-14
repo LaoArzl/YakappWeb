@@ -7,6 +7,8 @@ import { login } from "../../features/user";
 import { Redirect } from "react-router";
 import Axios from "axios";
 
+Axios.defaults.withCredentials = true;
+
 const Login = () => {
   const dispatch = useDispatch();
   const user = useSelector((state) => state.user.value);
@@ -15,7 +17,7 @@ const Login = () => {
   const [password, setPassword] = useState("");
 
   const submitLogin = () => {
-    Axios.post("https://yakapp.herokuapp.com/login-admin", {
+    Axios.post("https://yakapp.netlify.app/login-admin", {
       username,
       password,
     }).then((response) => {
