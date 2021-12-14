@@ -52,7 +52,7 @@ function App() {
           return (
             <ProtectedRoute
               key={e._id}
-              path={"/lesson/chapter/:id"}
+              path={"/lesson/chapter/" + e.lessonTitle}
               component={Chapter}
               id={e._id}
             />

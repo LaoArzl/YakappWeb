@@ -38,7 +38,7 @@ const Chapter = (props, { match }) => {
 
   useEffect(() => {
     lesson
-      .filter((id) => id.lesson === props.id)
+      .filter((id) => id._id === props.id)
       .map((e) => {
         setLessonTitle(e.lessonTitle);
         setDescription(e.description);
