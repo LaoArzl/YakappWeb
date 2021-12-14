@@ -19,7 +19,7 @@ function App() {
   const lesson = useSelector((state) => state.lesson.value);
 
   useEffect(() => {
-    Axios.get("http://localhost:3001/login-admin")
+    Axios.get("http://yakapp.herokuapp.com/login-admin")
       .then((response) => {
         if (response.data.loggedIn) {
           dispatch(login({ isLoggedIn: true, name: response.data.userType }));
@@ -31,7 +31,7 @@ function App() {
   }, []);
 
   useEffect(() => {
-    Axios.get("http://localhost:3001/image").then((response) => {
+    Axios.get("http://yakapp.herokuapp.com/image").then((response) => {
       if (response) {
         dispatch(updateImage(response.data));
       }

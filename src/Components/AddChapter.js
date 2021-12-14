@@ -8,7 +8,7 @@ const AddChapter = (props) => {
   const [reference, setReference] = useState("");
 
   const handleSubmit = () => {
-    Axios.put(`http://localhost:3001/add-chapter/${props.id}`, {
+    Axios.put(`http://yakapp.herokuapp.com/add-chapter/${props.id}`, {
       title,
       content,
       reference,

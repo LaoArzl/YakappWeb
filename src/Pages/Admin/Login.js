@@ -15,7 +15,7 @@ const Login = () => {
   const [password, setPassword] = useState("");
 
   const submitLogin = () => {
-    Axios.post("http://localhost:3001/login-admin", {
+    Axios.post("http://yakapp.herokuapp.com/login-admin", {
       username,
       password,
     }).then((response) => {

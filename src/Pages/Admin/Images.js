@@ -18,7 +18,7 @@ const Images = () => {
   const [name, setName] = useState("");
 
   useEffect(() => {
-    Axios.get("http://localhost:3001/image").then((response) => {
+    Axios.get("http://yakapp.herokuapp.com/image").then((response) => {
       if (response) {
         dispatch(updateImage(response.data));
       }

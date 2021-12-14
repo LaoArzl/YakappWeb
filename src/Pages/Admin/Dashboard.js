@@ -7,7 +7,6 @@ import "./Dashboard.css";
 import { withRouter } from "react-router";
 
 const Dashboard = () => {
-  const [on, setOn] = useState(false);
   return (
     <div className="dashboard-container">
       <Sidebar />
