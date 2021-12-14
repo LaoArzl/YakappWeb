@@ -22,13 +22,13 @@ const Lesson = () => {
   const [item, setItem] = useState("");
 
   useEffect(() => {
-    Axios.get("http://yakapp.herokuapp.com/add-lesson").then((response) => {
+    Axios.get("https://yakapp.herokuapp.com/add-lesson").then((response) => {
       dispatch(updateLesson(response.data));
     });
   }, [state]);
 
   const handleDelete = (id) => {
-    Axios.delete(`http://yakapp.herokuapp.com/delete-lesson/${id}`).then(
+    Axios.delete(`https://yakapp.herokuapp.com/delete-lesson/${id}`).then(
       (response) => {
         if (response.data) {
           setState("deleted");

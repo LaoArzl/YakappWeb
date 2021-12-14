@@ -25,7 +25,7 @@ const AddLesson = (props) => {
   };
 
   const handleSubmit = () => {
-    Axios.post("http://yakapp.herokuapp.com/add-lesson", {
+    Axios.post("https://yakapp.herokuapp.com/add-lesson", {
       lessonTitle,
       description,
     })

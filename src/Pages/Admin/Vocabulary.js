@@ -13,7 +13,7 @@ const Vocabulary = () => {
   const [state, setState] = useState("");
 
   useEffect(() => {
-    Axios.get("http://yakapp.herokuapp.com/words").then((response) => {
+    Axios.get("https://yakapp.herokuapp.com/words").then((response) => {
       dispatch(updateWord(response.data));
     });
   }, [state]);

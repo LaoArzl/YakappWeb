@@ -31,7 +31,7 @@ const AddImageForm = ({ setAfter }) => {
     })
       .then((res) => res.json())
       .then((data) => {
-        Axios.post("http://yakapp.herokuapp.com/image", {
+        Axios.post("https://yakapp.herokuapp.com/image", {
           uri: data.url,
         }).then((response) => {
           if (response.data.success === "success") {

@@ -50,7 +50,7 @@ const Chapter = (props, { match }) => {
   const { chapterId } = useParams();
 
   useEffect(() => {
-    Axios.get("http://yakapp.herokuapp.com/add-lesson").then((response) => {
+    Axios.get("https://yakapp.herokuapp.com/add-lesson").then((response) => {
       dispatch(updateLesson(response.data));
     });
   }, [state]);
@@ -61,7 +61,7 @@ const Chapter = (props, { match }) => {
   };
 
   const handleDelete = (id) => {
-    Axios.delete(`http://yakapp.herokuapp.com/delete-lesson/${props.id}`).then(
+    Axios.delete(`https://yakapp.herokuapp.com/delete-lesson/${props.id}`).then(
       (response) => {
         if (response.data) {
           setState("deleted");
@@ -74,7 +74,7 @@ const Chapter = (props, { match }) => {
   };
 
   const handleUpdate = () => {
-    Axios.put(`http://yakapp.herokuapp.com/update-lesson/${props.id}`, {
+    Axios.put(`https://yakapp.herokuapp.com/update-lesson/${props.id}`, {
       lessonTitle,
       description,
       icon: active,

@@ -32,7 +32,7 @@ const ViewChapter = (props) => {
   }, []);
 
   const handleSubmit = () => {
-    Axios.put(`http://yakapp.herokuapp.com/update-chapter/${props.tempId}`, {
+    Axios.put(`https://yakapp.herokuapp.com/update-chapter/${props.tempId}`, {
       title: title,
       content: content,
       reference: reference,
