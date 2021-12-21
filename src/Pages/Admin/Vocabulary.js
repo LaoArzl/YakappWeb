@@ -6,11 +6,13 @@ import "./Vocabulary.css";
 import { useSelector, useDispatch } from "react-redux";
 import Axios from "axios";
 import { updateWord } from "../../features/word";
+import AddWord from "../../Components/AddWord";
 
 const Vocabulary = () => {
   const word = useSelector((state) => state.word.value);
   const dispatch = useDispatch();
   const [state, setState] = useState("");
+  const [add, setAdd] = useState(false);
 
   useEffect(() => {
     Axios.get("https://yakapp.herokuapp.com/words").then((response) => {
@@ -19,6 +21,13 @@ const Vocabulary = () => {
   }, [state]);
   return (
     <div className="dashboard-container">
+      {add && (
+        <>
+          <div className="dashboard-container-after">
+            <AddWord setAdd={setAdd} />
+          </div>
+        </>
+      )}
       <Sidebar />
       <div className="dashboard-content">
         <Navbar />
@@ -33,11 +42,11 @@ const Vocabulary = () => {
               </p>
               <div>
                 <input
-                  placeholder="Search lessons"
+                  placeholder="Search words"
                   className="table-search"
                   type="search"
                 />
-                <div className="add-btn">
+                <div onClick={() => setAdd(true)} className="add-btn">
                   <i className="fas fa-plus"></i>Add
                 </div>
               </div>
